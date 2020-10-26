@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-weight: 700; 
+}
+.close-btn {
+  transform: rotate(45deg);
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  align-self: flex-end;
+  font-size: 30px;
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 96px);
+  width: 100%;
+}

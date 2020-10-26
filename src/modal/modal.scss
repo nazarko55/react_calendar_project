@@ -1,0 +1,32 @@
+.modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__content {
+      background-color: rgba(255, 255, 255, 0.925);
+      padding: 20px;
+      border: 2px solid rgb(174, 223, 223);
+      border-radius: 15px;
+  }
+}
+.close-btn {
+  color: #fff;
+  background-color: rgb(110, 158, 253);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  height: 25px;
+}
+.overlay {
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(234, 238, 245, 0.711);
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,10 @@
+.calendar__body {
+  display: flex;
+  overflow: auto;
+  padding-top: 25px;
+}
+.calendar__week {
+  display: flex;
+  flex-grow: 1;
+  margin: auto;
+}
