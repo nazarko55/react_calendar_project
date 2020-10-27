@@ -16,6 +16,7 @@ const Navigation = ({ setCurrentWeek, currentWeek }) => {
   const correctMonthsString = displayCorrectData('MMM');
   const correctYearsString = displayCorrectData('YYYY');
 
+  //debugger;
   return (
     <div className="navigation">
       <button className="navigation__today-btn" onClick={() => setCurrentWeek(0)}>Today</button>

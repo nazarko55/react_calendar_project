@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from './header/header';
 import { initialFormData } from '../momentDate/index';
-import { getEventsList } from '../serverPart/gateway';
+import { getEvents } from '../serverPart/gateway';
 import WeekHeader from './weekHeader/WeekHeader';
 import Week from './week/Week';
 import Modal from './modal/Modal';
@@ -10,12 +10,12 @@ import EventForm from './EventForm/EventFrom';
 
 const App = () => {
   const [currentWeek, setCurrentWeek] = useState(0);
-  const [isVisibleModal, toggleVisibleModal] = useState(false);
+  const [visibleModal, toggleVisibleModal] = useState(false);
   const [events, updateEvents] = useState([]);
   const [newEventData, setNewEventData] = useState(initialFormData);
 
 
-  const fetchEvents = () => getEventsList()
+  const fetchEvents = () => getEvents()
     .then(data => updateEvents(data))
     .catch(error => alert(error));
 
@@ -46,7 +46,7 @@ const App = () => {
         />
       </main>
       <Modal
-        isVisibleModal={isVisibleModal}
+        visibleModal={visibleModal}
         restart={restart}
       >
         <EventForm

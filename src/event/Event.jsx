@@ -4,12 +4,9 @@ import EventTool from '../event/EventTool';
 import './event.scss';
 
 
-const Event = ({
-  fetchEvents,
-  eventData
-}) => {
+const Event = ({ fetchEvents, eventData }) => {
   const [visibleTooltip, toggleVisibleTooltip] = useState(false);
-
+debugger;
   const { id, title, description, timeStart, timeEnd } = eventData;
 
   return (
@@ -17,7 +14,7 @@ const Event = ({
       <button
         className='event__close-btn close-btn'
         onClick={() => toggleVisibleTooltip(!visibleTooltip)}
-      >+</button>
+      >!</button>
       <div className="event__title">{title}</div>
       <div className="event__time">{`${timeStart} - ${timeEnd}`}</div>
       <div className='event__description'>{description}</div>
@@ -29,6 +26,7 @@ const Event = ({
         />}
     </div>
   )
+
 }
 
 Event.propTypes = {

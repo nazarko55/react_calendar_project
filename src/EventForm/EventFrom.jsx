@@ -35,11 +35,11 @@ class EventForm extends React.Component {
 
   handleCreateEvent = event => {
     event.preventDefault();
-    const { fetchEvents, reset } = this.props;
+    const { createEvent, reset } = this.props;
 
     createEvent(this.state.formData)
       .then(() => {
-        fetchEvents();
+        createEvents();
         reset();
         this.setState({ formData, initialFormData })
       })

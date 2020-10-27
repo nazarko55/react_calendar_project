@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './modal.scss';
 
-const Modal = ({ children, restart, isVisibleModal }) => {
+const Modal = ({ children, restart, visibleModal }) => {
 
-  const modalClassName = !isVisibleModal
+  const modalClassName = !visibleModal
     ? 'modal overlay hidden'
     : 'modal overlay';
 
@@ -22,7 +22,7 @@ const Modal = ({ children, restart, isVisibleModal }) => {
 
 Modal.propTypes = {
   children: PropTypes.element,
-  isVisibleModal: PropTypes.bool.isRequired,
+  visibleModal: PropTypes.bool.isRequired,
   restart: PropTypes.func.isRequired,
 }
 

@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { deleteEvent } from '../../serverPart/gateway'
+import { deleteEvents } from '../../serverPart/gateway'
 
 
 const EventTool = ({ id, fetchEvents, toggleVisibleTooltip }) => {
 
   useEffect(() => {
     const deleteEventHandler = () => {
-      deleteEvent(id)
+      deleteEvents(id)
         .then(() => fetchEvents())
         .catch(error => alert(error))
     }
@@ -16,6 +16,7 @@ const EventTool = ({ id, fetchEvents, toggleVisibleTooltip }) => {
     eventDelElement.addEventListener('click', deleteEventHandler);
 
     return () => eventDelElement.removeEventListener('click', deleteEventHandler);
+    debugger;
   });
 
   return (

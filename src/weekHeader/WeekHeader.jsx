@@ -13,7 +13,7 @@ const CalendarWeekHeader = ({ currentWeek }) => {
         const dayLableClassNamemoment = day === moment().format('YYYY-MM-DD')
           ? 'calendar__day-label today'
           : 'calendar__day-label';
-
+debugger;
         return (
           <div key={idx} className={dayLableClassNamemoment}>
             <span className="calendar__day-name">
