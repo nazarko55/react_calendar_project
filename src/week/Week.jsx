@@ -10,7 +10,7 @@ const Week = ({ events, currentWeek, fetchEvents, setNewEventData, toggleVisible
   const week = generateWeek(currentWeek);
 
   const getEventsInCurrentDay = day => events.filter(({ date }) => date === day);
-
+  //debugger;
 
   return (
     <div className="calendar__body">

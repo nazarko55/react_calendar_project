@@ -20,9 +20,8 @@ const Day = ({
     if (!e.target.classList.contains('calendar__hour')) {
       return
     }
-
     const { date, timestart } = e.target.dataset
-
+    //debugger;
     const dataInfForNewEvent = {
       title: '',
       description: '',

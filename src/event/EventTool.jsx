@@ -16,7 +16,7 @@ const EventTool = ({ id, fetchEvents, toggleVisibleTooltip }) => {
     eventDelElement.addEventListener('click', deleteEventHandler);
 
     return () => eventDelElement.removeEventListener('click', deleteEventHandler);
-    debugger;
+    //debugger;
   });
 
   return (
